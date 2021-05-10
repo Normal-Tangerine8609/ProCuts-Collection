@@ -12,7 +12,6 @@
     max-width: 650px;
     margin:0px;
     padding:0px;
-    padding-top:5%;
     padding-bottom:5%;
     }
   p,h1,h2{
@@ -37,6 +36,7 @@
      font-weight:600;
      font-size:33px;
      color:white;
+     text-align:center;
     }
       h3 {
      font-weight:800;
@@ -59,11 +59,6 @@
       border:1px solid black;
 }
   .phone{width:70%}
-  .yellowgreen{color:#7ff03c;}
-  .teal{color:#58BFA2;}
-  .green{color:#74C974;}
-  .red{color:#DC6263;}
-  .orange{color:#E7A152;}
   .download{
     text-decoration:none;
     padding:5px;
@@ -84,9 +79,69 @@
     padding:10px;
 }
   .bottom{margin-bottom:100px;}
+        .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #aaaaaa;
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg)                      translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+      .change .bar2 {opacity: 0;}
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+      .navbutton {
+        width:100%;
+        background-color: #1C1C1E;
+        margin:0px;
+        padding:0px;
+        height:40px;
+        border:none;
+        font-size:20px;
+        text-align:left;
+        color:#aaa;
+        border-bottom:3px solid black;
+      }
+      .navbutton:hover {
+        background-color:#505050;
+      }
+      .nav {
+        background-color: #1C1C1E;
+        border: none;
+        cursor: pointer;
+        width:100%;
+        padding-top:5px;
+        padding-bottom:5px;
+        border-bottom:3px solid black;
+      }
+  #tools a {color:white;}
+    .yellowgreen{color:#7ff03c;}
+  .teal{color:#58BFA2;}
+  .green{color:#74C974;}
+  .red{color:#DC6263;}
+  .orange{color:#E7A152;}
     </style>
 </head>
     <body>
+    <div onclick="toptoggle();nav()" class="nav"><center><div id="topmenu"class="container">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div></center></div>
+    <div id="navbuttons" style="display:none;">
+      <button class="navbutton" onclick="toptoggle();nav();display('home')">&nbsp;&nbsp;Home</button>
+      <button class="navbutton" onclick="toptoggle();nav();window.open('https://github.com/Normal-Tangerine8609/ProCuts-Collection/blob/main/ProCuts-Collection.html')">&nbsp;&nbsp;GitHub Sorce Code</button>
+      <button class="navbutton" onclick="toptoggle();nav();display('tools')">&nbsp;&nbsp;Helpful Tools</button>
+      <button class="navbutton teal" onclick="toptoggle();nav();display('sharpUpdater')">&nbsp;&nbsp;Sharp Updater</button>
+     <button class="navbutton red" onclick="toptoggle();nav();display('fancyListMaker')">&nbsp;&nbsp;Fancy List Maker</button>
+    <button class="navbutton green" onclick="toptoggle();nav();display('fontSwitcher')">&nbsp;&nbsp;Font Switcher</button>
+    <button class="navbutton orange" onclick="toptoggle();nav();display('quickLookHTMLGenerator')">&nbsp;&nbsp;Quick Look HTML Generator</button>
+      </div>
       <div id="home">
       <h1 class="yellowgreen">ProCuts Collection</h1>
       <p class="slogan yellowgreen">A collection of development-based shortcuts created to empower your shortcuts and shortcutting experience</p>
@@ -114,7 +169,7 @@
       <p class="slogan orange">No coding experience required to make beautiful HTMLs for your shortcuts, such as a welcome screen.</p>
         <center><button class="download orange orangehover" onclick="display('quickLookHTMLGenerator')">Read More</button>
           <a href="https://routinehub.co/shortcut/9097/" class="download orange orangehover">Get This Shortcut</a></center>
-        <br><p style="font-size:10px;text-align:center;">Send us feedback here <a class="yellowgreen"href="mailto:ProCutsCollection@outlook.com">ProCutsCollection@outlook.com</a>. This website is not finalized, more is coming.</p>
+        <br><p style="font-size:10px;text-align:center;">Send us feedback here <a class="yellowgreen"href="mailto:ProCutsCollection@outlook.com">ProCutsCollection@outlook.com</a>. Give us feedback or report bugs on any of our shortcuts. Suggestions are appreciated as well.</p>
 </div>
 
       <div id="sharpUpdater" style="display:none">
@@ -181,18 +236,47 @@
         <div class="bottom">&nbsp;</div>
         <div class="fixed"><center><button class="download orange orangehover" onclick="display('home')">Home</button>
         <a href="https://routinehub.co/shortcut/9097/" class="download orange orangehover">Get This Shortcut</a></center></div></div>
-              
+      <div id="tools" style="display:none;">
+        <h1 style="color:white;">Helpful Tools</h1>
+        <p>When developing shortcuts, it’s crucial to use your resources to help improve workability. We use many tools to help prefect our shortcuts. The following are some very useful tools we use that we think are important to share. We did not develop nor are we affiliated with any of these helpful tools.</p>
+        <h2><a href="https://www.linkpicture.com/en/?set=en">Link Picture</a></h2>
+        <center><img src="https://linkpicture.com/Images/nlogo.png" style="width:80%"></center>
+        <p>We used Link Picture quite a bit in our shortcuts. Link picture is a website that allows you to upload a picture and obtain the direct link to it. We use these links to save space in our shortcuts (instead of large base64 encodes). We usually used them in the HTMLs.</p>
+        <h2><a href="https://mockuphone.com/device">Phone Mock-Ups</a></h2>
+        <center><img src="https://www.linkpicture.com/q/EA935789-1FA5-40F0-AD34-F524ACB9FC63.jpeg" style="width:80%"></center>
+        <p>To make your image examples look professional, you can use this website. It puts your screenshot examples into a phone mock-up. As you see, we used these to show what our shortcut’s end results can be. The process is extremely easy and there are an abundance of devices to choose from.</p>
+        <h2><a href="https://routinehub.co/shortcut/4626/">Dictionary Action Builder</a></h2>
+        <center><img src="https://www.linkpicture.com/q/C286638F-BF01-49D2-A38B-D921110BECED.jpeg" style="width:80%"></center>
+        <p>Turn your raw JSON files into a shortcut "Dictionary" action with this shortcut made by <a href="https://routinehub.co/user/gluebyte">@glubyte</a>. This can be extremely helpful when working with large dictionaries or other coding languages. It’s definitely a valuable addition to your development tools collection. This shortcut was used in the Font Switcher shortcut to create a dictionary faster than putting in each individual letter.</p>
+        <h2><a href="">Copy And Paste A Shortcut</a></h2>
+       <center><img src="https://www.linkpicture.com/q/94AF07C7-D148-4D12-BB1F-22BD625352A0.jpeg" style="width:80%"></center>
+        <p>Easily copy all or some of the actions from one of your shortcuts into another using this tool by <a href="https://routinehub.co/user/robric18">@robric18</a>. There are countless uses for this shortcut but any way you use it it a good way. Although a bit excessive in the settings, it is very easy to use. We would advise using the quick copy action for all of your needs.</p>
+      </div>
   <script>
-        document.body.scrollTop = 0
+      document.body.scrollTop = 0
         function display(x) {
 setTimeout(function(){
-                  for(var i of ["home","sharpUpdater","fontSwitcher","fancyListMaker","quickLookHTMLGenerator"]) {
+                  for(var i of ["home","sharpUpdater","fontSwitcher","fancyListMaker","quickLookHTMLGenerator","tools"]) {
    document.getElementById(i).style.display = "none"
         }
    document.getElementById(x).style.display = "block"
-  document.body.scrollTop = 0
-}, 500);
-        }
+document.body.scrollTop = 0
+  if(document.getElementById("navbuttons").style.display === "block"){
+    nav();
+    toptoggle()
+  }}, 500);
+     }
+          function nav() {
+  var x = document.getElementById("navbuttons");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+      }
+              function toptoggle() {
+ document.getElementById('topmenu').classList.toggle('change')
+      }
   </script>
 </body>
 </html>
