@@ -35,13 +35,13 @@
       h2{
      font-weight:600;
      font-size:33px;
-     color:white;
+     color:#f1f1f1;
      text-align:center;
     }
       h3 {
      font-weight:800;
      font-size:25px;
-     color:white;
+     color:#f1f1f1;
      text-align:center;
   }
     .Slogan {
@@ -70,7 +70,8 @@
   .tealhover:hover{color:#1c1c1e;background-color:#58BFA2;}
     .greenhover:hover{color:#1c1c1e;background-color:#74C974;}
   .redhover:hover{color:#1c1c1e;background-color:#DC6263;}
-  .orangehover:hover{color:#1c1c1e;background-color:#E7A152;;}
+  .orangehover:hover{color:#1c1c1e;background-color:#E7A152;}
+    .violethover:hover{color:#1c1c1e;background-color:#724BAB;}
   .fixed{
     position: fixed;
     bottom: 0;
@@ -119,12 +120,13 @@
         padding-bottom:5px;
         border-bottom:3px solid black;
       }
-  #tools a {color:white;}
+  #tools a {color:#f1f1f1;}
     .yellowgreen{color:#7ff03c;}
   .teal{color:#58BFA2;}
   .green{color:#74C974;}
   .red{color:#DC6263;}
   .orange{color:#E7A152;}
+  .violet{color:#724BAB;}
     </style>
 </head>
     <body>
@@ -141,6 +143,7 @@
      <button class="navbutton red" onclick="toptoggle();nav();display('fancyListMaker')">&nbsp;&nbsp;Fancy List Maker</button>
     <button class="navbutton green" onclick="toptoggle();nav();display('fontSwitcher')">&nbsp;&nbsp;Font Switcher</button>
     <button class="navbutton orange" onclick="toptoggle();nav();display('quickLookHTMLGenerator')">&nbsp;&nbsp;Quick Look HTML Generator</button>
+    <button class="navbutton violet" onclick="toptoggle();nav();display('GFVIC')">&nbsp;&nbsp;Google Font Vcard Icon Creator</button>
       </div>
       <div id="home">
       <h1 class="yellowgreen">ProCuts Collection</h1>
@@ -169,6 +172,11 @@
       <p class="slogan orange">No coding experience required to make beautiful HTMLs for your shortcuts, such as a welcome screen.</p>
         <center><button class="download orange orangehover" onclick="display('quickLookHTMLGenerator')">Read More</button>
           <a href="https://routinehub.co/shortcut/9097/" class="download orange orangehover">Get This Shortcut</a></center>
+       <h1 class="violet">Google Font Vcard Icon Creator</h1>
+      <center><img class="icon" src="https://www.linkpicture.com/q/C435BFA3-FA73-413A-B149-5857212A7218.png"></center>
+      <p class="slogan violet">Use the google font icon library to make custom vCard icons</p>
+        <center><button class="download violet violethover" onclick="display('GFVIC')">Read More</button>
+          <a href="https://routinehub.co/shortcut/9254/" class="download violet violethover">Get This Shortcut</a></center>
         <br><p style="font-size:10px;text-align:center;">Send us feedback here <a class="yellowgreen"href="mailto:ProCutsCollection@outlook.com">ProCutsCollection@outlook.com</a>. Give us feedback or report bugs on any of our shortcuts. Suggestions are appreciated as well.</p>
 </div>
 
@@ -188,7 +196,7 @@
         <li>Reliable</li>
       </ul></strong>
       <h2>When Finished, It Will Look Something Like This</h2>
-      <center><img src="https://www.linkpicture.com/q/AF48B2AD-7849-48C8-8E2A-892B37EAE10C.jpeg"></center>
+      <center><img src="https://www.linkpicture.com/q/AF48B2AD-7849-48C8-8E2A-892B37EAE10C.jpeg"></center>
       <h2>Update Outcomes</h2>
       <p>There are three possible outcomes when someone tries to update the shortcut.</p>
       <h3>New Version</h3>
@@ -252,11 +260,21 @@
        <center><img src="https://www.linkpicture.com/q/94AF07C7-D148-4D12-BB1F-22BD625352A0.jpeg" style="width:80%"></center>
         <p>Easily copy actions from one of your shortcuts into another using this tool by <a href="https://routinehub.co/user/robric18">@robric18</a>. This is helpful in many cases, such as if you use a snippet of code in most of your shortcuts (like an updater). Instead of copying it action by action, just run this shortcut to copy and paste all the actions at once. Although a bit excessive in the settings, it is very easy to use. We would advise using the quick copy action for all of your needs.</p>
       </div>
+     <div id="GFVIC" style="display:none">
+        <h1 class="violet">Google Font Vcard Icon Creator</h1>
+      <center><img class="icon" src="https://www.linkpicture.com/q/C435BFA3-FA73-413A-B149-5857212A7218.png"></center>
+      <p class="slogan violet">Use the google font icon library to make custom vCard icons</p>
+       <p>Using the <a class="violet" href="https://fonts.google.com/icons ">Google Icons</a> library, a library of 1052 different icons, each with 5 different styles, you can create amazing looking images for your vCard menus. You can choose your icon background colour from 50 pre-made gradients, make your own gradient, select a shortcut colour or enter your own hex colour. You can also select your icon hex colour and create all your icons at once.</p>
+       <center><img src="https://i.ibb.co/dL7zTyb/1-CBDBD9-D-62-BF-41-F6-BDEE-7-A06-D8-D7-D7-F7.png"></center>
+       <p>Once your done creating your stunning icons, you can run <a onclick="display('fancyListMaker')" class="violet" style="text-decoration:underline;">Fancy List Maker</a> to make your vCard menu. This shortcut is easy-to-use and has an astonishing effect of your vCard menus.</p>
+        <div class="bottom">&nbsp;</div>
+        <div class="fixed"><center><button class="download violet violethover" onclick="display('home')">Home</button>
+        <a href="https://routinehub.co/shortcut/9254/" class="download violet violethover">Get This Shortcut</a></center></div></div>
   <script>
       document.body.scrollTop = 0
         function display(x) {
 setTimeout(function(){
-                  for(var i of ["home","sharpUpdater","fontSwitcher","fancyListMaker","quickLookHTMLGenerator","tools"]) {
+                  for(var i of ["home","sharpUpdater","fontSwitcher","fancyListMaker","quickLookHTMLGenerator","tools","GFVIC"]) {
    document.getElementById(i).style.display = "none"
         }
    document.getElementById(x).style.display = "block"
